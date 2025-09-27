@@ -5,26 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SitoSubito - Il tuo sito web pronto in pochi giorni</title>
   <style>
-    /* RESET */
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',system-ui,sans-serif}
     body{background:#f5f7fa;color:#2d2d2d;line-height:1.6}
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
-    /* HEADER */
     header{background:linear-gradient(90deg,#4facfe,#00f2fe);color:#fff;padding:15px 0;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px rgba(0,0,0,.1);border-bottom-left-radius:12px;border-bottom-right-radius:12px}
     .header-content{display:flex;justify-content:space-between;align-items:center}
     .logo{font-size:1.6rem;font-weight:700}
     .logo span{color:#ffe066}
-    /* HERO */
     .hero{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);color:white;border-radius:0 0 40px 40px;margin-bottom:50px}
     .hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:20px;font-weight:800}
     .hero p{font-size:1.2rem;max-width:700px;margin:0 auto 30px;opacity:.95}
-    .btn{display:inline-block;background:#ffe066;color:#333;padding:14px 28px;border-radius:40px;font-weight:600;text-decoration:none;transition:.25s;box-shadow:0 6px 15px rgba(0,0,0,.15)}
+    .btn{display:inline-block;background:#ffe066;color:#333;padding:12px 24px;border-radius:40px;font-weight:600;text-decoration:none;transition:.25s;box-shadow:0 6px 15px rgba(0,0,0,.15)}
     .btn:hover{transform:scale(1.05);box-shadow:0 10px 20px rgba(0,0,0,.2)}
-    .btn-large{font-size:1.1rem}
-    /* SECTIONS */
+    .btn-small{font-size:.9rem;padding:10px 20px}
+    .btn-large{font-size:1.1rem;padding:14px 28px}
     .section{padding:60px 20px}
     .section-title{text-align:center;margin-bottom:40px;font-size:2rem;color:#0077b6;font-weight:700}
-    /* PACKAGES */
     .packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
     .package{background:#fff;border-radius:20px;padding:30px;box-shadow:0 4px 20px rgba(0,0,0,.05);transition:.3s;text-align:center}
     .package:hover{transform:translateY(-6px);box-shadow:0 6px 25px rgba(0,0,0,.08)}
@@ -33,20 +29,16 @@
     .price{font-size:2rem;font-weight:700;margin:15px 0;color:#0096c7}
     .price span{font-size:.9rem;color:#666}
     .features{list-style:none;text-align:left;margin-top:15px}
-    .features li{padding:8px 0;display:flex;align-items:center}
+    .features li{padding:6px 0;display:flex;align-items:center}
     .features li::before{content:"✔";color:#38b000;font-weight:bold;margin-right:10px}
-    /* PROCESS */
     .process-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
     .step{background:#fff;border-radius:16px;padding:25px;text-align:center;width:220px;box-shadow:0 4px 20px rgba(0,0,0,.05)}
     .step-number{background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700}
-    /* FORM */
     .simple-form{background:#fff;border-radius:20px;padding:30px;box-shadow:0 6px 20px rgba(0,0,0,.05);max-width:600px;margin:0 auto}
     .form-group{margin-bottom:20px}
     .form-group label{display:block;margin-bottom:8px;font-weight:600;color:#0077b6}
     .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:12px;font-size:1rem}
-    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#4facfe;outline:none}
     .form-group textarea{min-height:120px;resize:vertical}
-    /* FOOTER */
     footer{background:#0077b6;color:white;padding:50px 20px 25px;border-top-left-radius:20px;border-top-right-radius:20px;margin-top:60px}
     .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-bottom:30px}
     .footer-section h3{margin-bottom:15px;font-size:1.2rem}
@@ -55,8 +47,12 @@
     .footer-section a{color:#ddd;text-decoration:none;transition:.3s}
     .footer-section a:hover{color:#fff}
     .copyright{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);font-size:.9rem;color:#eee}
-    /* RESPONSIVE */
-    @media(max-width:768px){.hero h1{font-size:2rem}.packages{grid-template-columns:1fr}.process-steps{flex-direction:column;align-items:center}}
+    .portfolio{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+    .portfolio-item{background:#fff;border-radius:20px;box-shadow:0 4px 20px rgba(0,0,0,.05);overflow:hidden;transition:.3s}
+    .portfolio-item img{width:100%;display:block}
+    .portfolio-item h4{padding:15px;color:#0077b6;font-size:1.2rem}
+    .portfolio-item p{padding:0 15px 20px;color:#444;font-size:.95rem}
+    @media(max-width:768px){.hero h1{font-size:2rem}.packages,.portfolio{grid-template-columns:1fr}.process-steps{flex-direction:column;align-items:center}}
   </style>
 </head>
 <body>
@@ -86,36 +82,60 @@
             <li>5 pagine responsive</li>
             <li>Design moderno</li>
             <li>Modulo contatti</li>
-            <li>Ottimizzazione base SEO</li>
-            <li>Assistenza 30 giorni</li>
+            <li>SEO base</li>
           </ul>
-          <a href="#ordina" class="btn" data-package="start">Scegli Start</a>
+          <a href="#ordina" class="btn" data-package="start">Ordina dal form</a>
+          <br><br>
+          <a href="https://wa.me/393384461593?text=Vorrei%20ordinare%20il%20pacchetto%20Start" target="_blank" class="btn btn-small">Ordina su WhatsApp</a>
         </div>
         <div class="package popular">
           <h3>Business <span style="background:#ffe066;color:#333;padding:3px 8px;border-radius:12px;font-size:.8rem;">Popolare</span></h3>
           <div class="price">€599 <span>/una tantum</span></div>
           <ul class="features">
-            <li>Tutto lo Start</li>
             <li>Fino a 15 pagine</li>
             <li>Gestione contenuti (CMS)</li>
             <li>Blog integrato</li>
             <li>SEO avanzato</li>
-            <li>Assistenza 90 giorni</li>
           </ul>
-          <a href="#ordina" class="btn" data-package="business">Scegli Business</a>
+          <a href="#ordina" class="btn" data-package="business">Ordina dal form</a>
+          <br><br>
+          <a href="https://wa.me/393384461593?text=Vorrei%20ordinare%20il%20pacchetto%20Business" target="_blank" class="btn btn-small">Ordina su WhatsApp</a>
         </div>
         <div class="package">
           <h3>Premium</h3>
           <div class="price">€999 <span>/una tantum</span></div>
           <ul class="features">
-            <li>Tutto il Business</li>
             <li>Pagine illimitate</li>
             <li>E-commerce completo</li>
             <li>Pagamenti online</li>
-            <li>Area riservata clienti</li>
-            <li>Assistenza 180 giorni</li>
+            <li>Area riservata</li>
           </ul>
-          <a href="#ordina" class="btn" data-package="premium">Scegli Premium</a>
+          <a href="#ordina" class="btn" data-package="premium">Ordina dal form</a>
+          <br><br>
+          <a href="https://wa.me/393384461593?text=Vorrei%20ordinare%20il%20pacchetto%20Premium" target="_blank" class="btn btn-small">Ordina su WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#eef7ff">
+    <div class="container">
+      <h2 class="section-title">Esempi di siti realizzati</h2>
+      <div class="portfolio">
+        <div class="portfolio-item">
+          <img src="https://picsum.photos/600/400?random=1" alt="Bar La Zisola">
+          <h4>Bar La Zisola</h4>
+          <p>Sito vetrina con menu digitale e ordini veloci per il bar storico della città.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://picsum.photos/600/400?random=2" alt="Olio di Santina">
+          <h4>Olio di Santina</h4>
+          <p>E-commerce per vendita diretta di olio extra vergine d’oliva artigianale.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://picsum.photos/600/400?random=3" alt="B&B Solemare">
+          <h4>B&B Solemare</h4>
+          <p>Sito con sistema di prenotazioni online per un bed and breakfast vicino al mare.</p>
         </div>
       </div>
     </div>
@@ -125,28 +145,16 @@
     <div class="container">
       <h2 class="section-title">Come funziona</h2>
       <div class="process-steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Scegli</h3>
-          <p>Seleziona il pacchetto più adatto alle tue esigenze.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Personalizza</h3>
-          <p>Comunica colori, loghi e contenuti che desideri.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Ricevi</h3>
-          <p>In pochi giorni avrai il tuo sito pronto online.</p>
-        </div>
+        <div class="step"><div class="step-number">1</div><h3>Scegli</h3><p>Seleziona il pacchetto più adatto alle tue esigenze.</p></div>
+        <div class="step"><div class="step-number">2</div><h3>Personalizza</h3><p>Comunica colori, loghi e contenuti che desideri.</p></div>
+        <div class="step"><div class="step-number">3</div><h3>Ricevi</h3><p>In pochi giorni avrai il tuo sito pronto online.</p></div>
       </div>
     </div>
   </section>
 
   <section id="ordina" class="section">
     <div class="container">
-      <h2 class="section-title">Ordina adesso</h2>
+      <h2 class="section-title">Ordina dal form</h2>
       <div class="simple-form">
         <form id="order-form">
           <div class="form-group">
@@ -171,7 +179,7 @@
             <textarea id="description" name="description" placeholder="Colori, loghi, funzioni richieste..."></textarea>
           </div>
           <div class="form-group" style="text-align:center">
-            <button type="submit" class="btn btn-large" style="width:100%">Invia richiesta</button>
+            <button type="submit" class="btn btn-large" style="width:100%">Invia richiesta su WhatsApp</button>
           </div>
         </form>
       </div>
@@ -189,7 +197,7 @@
           <h3>Contatti</h3>
           <ul>
             <li>📧 info@sitosubito.it</li>
-            <li>📞 +39 328 1234567</li>
+            <li>📞 +39 338 4461593</li>
             <li>🕒 Lun-Ven 9:00-18:00</li>
           </ul>
         </div>
@@ -213,9 +221,16 @@
       const pkg=document.getElementById('package').value;
       const name=document.getElementById('name').value;
       const email=document.getElementById('email').value;
+      const description=document.getElementById('description').value;
       if(!pkg||!name||!email){alert("Compila i campi obbligatori.");return;}
       const pkgNames={start:"Start (€299)",business:"Business (€599)",premium:"Premium (€999)"};
-      alert(`Grazie ${name}! La tua richiesta per il pacchetto ${pkgNames[pkg]} è stata inviata. Ti contatteremo presto a ${email}.`);
+      const message=`Nuovo ordine da SitoSubito:%0A
+Nome: ${name}%0A
+Email: ${email}%0A
+Pacchetto: ${pkgNames[pkg]}%0A
+Descrizione: ${description}`;
+      const phone="393384461593";
+      window.open(`https://wa.me/${phone}?text=${message}`,"_blank");
       this.reset();
     });
     document.querySelectorAll('a[data-package]').forEach(link=>{
