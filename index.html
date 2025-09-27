@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SitoFacile - Crea il tuo sito web personalizzato</title>
+    <title>SitoSubito - Crea il tuo sito web personalizzato in pochi click</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* RESET E STILI BASE */
@@ -17,9 +17,9 @@
         :root {
             --primary: #4361ee;
             --secondary: #3a0ca3;
-            --accent: #ffd166;
+            --accent: #ff6b6b;
             --success: #06d6a0;
-            --danger: #ef476f;
+            --warning: #ffd166;
             --light: #f8f9fa;
             --dark: #212529;
             --gray: #6c757d;
@@ -104,7 +104,7 @@
             position: absolute;
             top: -8px;
             right: -8px;
-            background: var(--danger);
+            background: var(--accent);
             color: white;
             border-radius: 50%;
             width: 18px;
@@ -162,7 +162,7 @@
             align-items: center;
             justify-content: center;
             background: var(--accent);
-            color: var(--dark);
+            color: white;
             padding: 12px 25px;
             border: none;
             border-radius: 50px;
@@ -260,7 +260,7 @@
             top: 20px;
             right: -30px;
             background: var(--accent);
-            color: var(--dark);
+            color: white;
             padding: 8px 35px;
             transform: rotate(45deg);
             font-size: 0.8rem;
@@ -728,6 +728,18 @@
         .hidden {
             display: none;
         }
+        
+        /* BADGE PER TEMPI DI CONSEGNA */
+        .delivery-badge {
+            display: inline-block;
+            background: var(--success);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -735,8 +747,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <i class="fas fa-code"></i>
-                    Sito<span>Facile</span>
+                    <i class="fas fa-bolt"></i>
+                    Sito<span>Subito</span>
                 </div>
                 <nav>
                     <ul>
@@ -777,9 +789,10 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Crea il tuo sito web professionale</h1>
-                <p>Design su misura, funzionalità avanzate e massima semplicità. Il tuo sito online in pochi giorni.</p>
-                <a href="#pacchetti" class="btn btn-large"><i class="fas fa-rocket"></i> Inizia Ora</a>
+                <h1>Il tuo sito web, pronto subito!</h1>
+                <p>Con SitoSubito crei il sito dei tuoi sogni in pochi click. Professionale, veloce e su misura per te.</p>
+                <a href="#pacchetti" class="btn btn-large"><i class="fas fa-rocket"></i> Vedi i Pacchetti</a>
+                <p class="mt-20"><i class="fas fa-shield-alt"></i> Soddisfatto o rimborsato entro 14 giorni</p>
             </div>
         </div>
     </section>
@@ -790,7 +803,7 @@
             
             <div class="packages">
                 <div class="package fade-in">
-                    <h3>Base</h3>
+                    <h3>Base <span class="delivery-badge">7 giorni</span></h3>
                     <p class="subtitle">Perfetto per piccoli business e professionisti</p>
                     <div class="price">€299<span>/una tantum</span></div>
                     <ul class="features">
@@ -806,7 +819,7 @@
                 </div>
                 
                 <div class="package popular fade-in">
-                    <h3>Business</h3>
+                    <h3>Business <span class="delivery-badge">10 giorni</span></h3>
                     <p class="subtitle">Ideale per aziende in crescita</p>
                     <div class="price">€599<span>/una tantum</span></div>
                     <ul class="features">
@@ -822,7 +835,7 @@
                 </div>
                 
                 <div class="package fade-in">
-                    <h3>Premium</h3>
+                    <h3>Premium <span class="delivery-badge">15 giorni</span></h3>
                     <p class="subtitle">La soluzione completa per il tuo business</p>
                     <div class="price">€999<span>/una tantum</span></div>
                     <ul class="features">
@@ -963,7 +976,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>SitoFacile</h3>
+                    <h3>SitoSubito</h3>
                     <p>Creiamo siti web professionali e su misura per ogni esigenza. Semplicità, qualità e supporto continuo.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -976,7 +989,7 @@
                 <div class="footer-section">
                     <h3>Contatti</h3>
                     <ul>
-                        <li><a href="#"><i class="fas fa-envelope"></i> info@sitofacile.it</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@sitosubito.it</a></li>
                         <li><a href="#"><i class="fas fa-phone"></i> 800 123 456</a></li>
                         <li><a href="#"><i class="fas fa-map-marker-alt"></i> Via Roma 123, Milano</a></li>
                     </ul>
@@ -1004,7 +1017,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 SitoFacile. Tutti i diritti riservati. | P.IVA: 01234567890</p>
+                <p>&copy; 2023 SitoSubito. Tutti i diritti riservati. | P.IVA: 01234567890</p>
             </div>
         </div>
     </footer>
